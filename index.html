@@ -1,62 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eric Yoon - Full Stack Developer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <section class="intro">
-        <h1>Hi, I'm Eric</h1>
-        <p>Full Stack Developer</p>
-    </section>
 
-    <nav id="navbar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+<body>
+    <div class="intro" id="hero">
+        <div class="fabric">
+            <canvas class="intro_background"></canvas>
+        </div>
+        <div class="heading">
+            <div class="title_line_1">
+                Hello, I'm <a href="#about" class="clickable-name">Eric</a>,
+            </div>
+            <div class="title_line_2">a Full stack web developer.</div>
+            <a href="#projects" class="heading__link">
+                <div class="heading-cta">
+                    View my work 
+                    <svg class="heading__arrow" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <title>arrow-right</title>
+                        <path d="M11.293 5.707l5.293 5.293h-11.586c-0.552 0-1 0.448-1 1s0.448 1 1 1h11.586l-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l7-7c0.092-0.092 0.166-0.202 0.217-0.324 0.101-0.245 0.101-0.521 0-0.766-0.049-0.118-0.121-0.228-0.217-0.324l-7-7c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <nav class="navigation-bar">
+        <ul class="navigation">
+            <li class="navigation_item navigation_item--active" id="nav-hero">
+                <a href="#hero">Home</a>
+            </li>
+            <li class="navigation_item" id="nav-about">
+                <a href="#about">About</a>
+            </li>
+            <li class="navigation_item" id="nav-projects">
+                <a href="#projects">Projects</a>
+            </li>
+            <li class="navigation_item" id="nav-contact">
+                <a href="#contact">Contact</a>
+            </li>
         </ul>
     </nav>
 
     <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>This is the home page content.</p>
-        </section>
-
         <section id="about">
-            <h2>About</h2>
-            <p>This is the about page content.</p>
+            <h2 class="section-heading">About Me</h2>
+            <div class="about_content">
+                <div class="profile__picture">
+                    <img src="path_to_your_image.png" alt="Profile Picture" />
+                </div>
+                <div class="about_section">
+                    <p>I'm an undergraduate Computer Engineering student attending the University of Waterloo! I'm a full stack developer with a deep passion for continous learning and am familiar with C++, Next.js, Python, and a variety of other languages/frameworks. When I'm not tinkering away on my computer, I like to spend my time reading, keeping fit, and learning new languages!</p>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="skill">
+                    <img src="images/html_5.png" alt="HTML" />
+                    <p>HTML</p>
+                </div>
+                <div class="skill">
+                    <img src="images/CSS.png" alt="CSS" />
+                    <p>CSS</p>
+                </div>
+                <div class="skill">
+                    <img src="images/js.png" alt="JavaScript" />
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill">
+                    <img src="images/C++.png" alt="C++" />
+                    <p>C++</p>
+                </div>
+                <div class="skill">
+                    <img src="images/Python.png" alt="Python" />
+                    <p>Python</p>
+                </div>
+                <div class="skill">
+                    <img src="images/mongodb.png" alt="MongoDB" />
+                    <p>MongoDB</p>
+                </div>
+                <div class="skill">
+                    <img src="images/git.png" alt="Git" />
+                    <p>Git</p>
+                </div>
+                <div class="skill">
+                    <img src="images/nextjs.png" alt="Next.js" />
+                    <p>Next.js</p>
+                </div>
+            </div>
         </section>
 
         <section id="projects">
-            <h2>Projects</h2>
-            <p>This is the projects page content.</p>
+            <h2 class="section-heading">Projects</h2>
+            <div class="project project-left">
+                <a href="https://example.com" target="_blank">
+                    <div class="project__image-container">
+                        <div class="project__image-image">
+                            <!-- Project image here -->
+                        </div>
+                    </div>
+                </a>
+                <div class="project__info">
+                    <h3 class="project__title">Project Title</h3>
+                    <p class="project__description">Project description goes here.</p>
+                    <a href="https://example.com" target="_blank" class="project__live-2">project link</a>
+                    <a href="https://github.com" target="_blank" class="project__live-2">github</a>
+                </div>
+            </div>
         </section>
 
         <section id="contact">
-            <h2>Contact</h2>
-            <form id="contact-form" action="/submit" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Submit</button>
+            <h2 class="section-heading">Contact</h2>
+            <p class="contact__text">If you are interested in collaborating or have a question, leave your information below and I'll respond promptly!</p>
+            <form class="contact__form" action="/submit" method="post">
+                <input class="contact__form-name" name="name" placeholder="Name"/>
+                <input class="contact__form-email" type="email" name="_replyto" placeholder="Email"/>
+                <textarea class="contact__form-message" name="message" placeholder="Message"></textarea>
+                <button type="submit" class="contact__form-submit">Submit</button>
             </form>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Eric Yoon</p>
+    <footer class="footer">
+        <a href="#intro">
+            <div class="return-home">
+                <!-- Return home SVG here -->
+            </div>
+        </a>
+        <div class="socials">
+            <a href="https://github.com" target="_blank">
+                <div class="socials__github">
+                    <!-- GitHub icon here -->
+                </div>
+            </a>
+            <a href="mailto:example@example.com" target="_blank">
+                <div class="socials__email">
+                    <!-- Email icon here -->
+                </div>
+            </a>
+        </div>
+        <p class="copyright">ERIC YOON ©2024</p>
     </footer>
+
+    <div class="cursor-circle"></div>
 
     <script src="script.js"></script>
 </body>
