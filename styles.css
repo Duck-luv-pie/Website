@@ -233,6 +233,7 @@ button {
 
 .about_section {
     flex: 1 1 60%;
+    font-weight: 300;
 }
 
 .skills {
@@ -400,4 +401,11 @@ button {
     transition: transform 0.1s ease;
     transform: translate(-50%, -50%);
     z-index: 9999;
+}
+
+.contact__text{
+    color: #fafafa;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-left: 10rem;
 }
