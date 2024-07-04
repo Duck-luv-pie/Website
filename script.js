@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let circleY = 0;
 
     document.addEventListener('mousemove', function(event) {
-        mouseX = event.clientX;
-        mouseY = event.clientY;
+        mouseX = event.clientX-5;
+        mouseY = event.clientY-5;
     });
 
     function animateCircle() {

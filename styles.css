@@ -234,6 +234,8 @@ button {
 .about_section {
     flex: 1 1 60%;
     font-weight: 300;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .skills {
@@ -289,17 +291,30 @@ button {
     align-items: center;
 }
 
-.contact__form-name, .contact__form-email, .contact__form-message {
+.contact__form-name, .contact__form-email {
     margin-bottom: 6px;
     padding: 1rem;
     background-color: #282828;
     color: inherit;
     font-size: 1.6rem;
     border: none;
+    width: 50%;
+}
+
+.contact__form-message{
+    margin-bottom: 6px;
+    padding: 1rem;
+    background-color: #282828;
+    color: inherit;
+    font-size: 1.6rem;
+    border: none;
+    width: 50%;
+    height: 200px;
 }
 
 .contact__form-submit {
     margin-top: 1rem;
+    margin-bottom: 20px;
     padding: 0.6rem 1rem;
     background-color: #FEC260;
     color: white;
@@ -307,10 +322,11 @@ button {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: 50%;
 }
 
 .contact__form-submit:hover {
-    background-color: #FEC260;
+    background-color: #FFF283;
 }
 
 .footer {
@@ -409,7 +425,9 @@ button {
     color: #fafafa;
     font-size: 1.8rem;
     font-weight: 300;
-    margin-left: 19rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 30px;
 }
 
 .project__title{
@@ -459,9 +477,10 @@ body {
 }
 
 .project__image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+    width: 85%;
+    position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .project__info {
@@ -506,4 +525,11 @@ body {
     .project__info {
         text-align: center;
     }
+}
+
+.social-icon{
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
