@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section');
-    const navItems = document.querySelectorAll('.navigation__item');
+    const navItems = document.querySelectorAll('.navigation_item');
     const home = document.getElementById('hero');
     const contact = document.getElementById('contact');
 
+    // Highlighting navigation items on scroll
     window.addEventListener('scroll', () => {
-        let current = 'hero'; // Default to 'hero' to ensure something is always highlighted
+        let current = 'hero';
 
-        // Check if the pageYOffset (scroll position) is less than the height of the home section minus 60 pixels
         if (pageYOffset < home.offsetHeight - 60) {
             current = 'hero';
         } else {
@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
 
-            // Check if the scroll position plus the window height is greater than or equal to the total height of the document minus 2 pixels
             if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 2) {
                 current = 'contact';
             }
@@ -32,7 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
+
+    // Moving the dot with the cursor
     const cursorCircle = document.querySelector('.cursor-circle');
 
     let mouseX = 0;
@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let circleY = 0;
 
     document.addEventListener('mousemove', function(event) {
-        mouseX = event.clientX-6;
-        mouseY = event.clientY-5;
+        mouseX = event.clientX;
+        mouseY = event.clientY;
     });
 
     function animateCircle() {
@@ -56,5 +56,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
     animateCircle();
 });
-
-
