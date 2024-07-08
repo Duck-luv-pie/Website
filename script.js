@@ -43,11 +43,15 @@ document.addEventListener('DOMContentLoaded', function() {
     let mouseY = 0;
     let circleX = 0;
     let circleY = 0;
+    let isFirstMove = true;
 
     document.addEventListener('mousemove', function(event) {
+        if (isFirstMove) {
+            cursorCircle.style.display = 'block';
+            isFirstMove = false;
+        }
         mouseX = event.clientX - 5;
         mouseY = event.clientY - 5;
-        console.log(`Mouse X: ${mouseX}, Mouse Y: ${mouseY}`);
     });
 
     function animateCircle() {
