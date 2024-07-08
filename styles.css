@@ -62,7 +62,7 @@ button {
 
 .intro_background {
     height: 100%;
-    width: 100%
+    width: 100%;
 }
 
 .heading {
@@ -173,11 +173,31 @@ button {
     }
 }
 
+@media (max-width: 480px) {
+    .title_line_1, .title_line_2 {
+        font-size: 4rem;
+        text-align: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .heading-cta {
+        width: auto;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .heading__arrow {
+        height: 18px;
+        width: 18px;
+        margin-left: 8px;
+    }
+}
+
 .navigation-bar {
     position: sticky;
     top: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     height: 6rem;
     border-bottom: 1px solid #1a1a1a;
@@ -185,6 +205,16 @@ button {
     backdrop-filter: blur(8px);
     box-shadow: 0 4px 4px rgba(0,0,0,0.3);
     z-index: 10000;
+}
+
+.hamburger {
+    display: none;
+    font-size: 3rem;
+    background: none;
+    border: none;
+    color: #FEC260;
+    cursor: pointer;
+    padding: 0 1rem;
 }
 
 .navigation {
@@ -207,6 +237,53 @@ button {
     color: #FEC260;
 }
 
+@media (max-width: 768px) {
+    .navigation-bar {
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(40,40,40,0.95);
+        position: absolute;
+        top: 6rem;
+        left: 0;
+        padding: 1rem 0;
+        border-top: 1px solid #1a1a1a;
+    }
+
+    .navigation_item {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .navigation_item a {
+        display: block;
+        padding: 1rem;
+    }
+
+    .navigation_item--active {
+        background-color: #FEC260;
+        color: #1a1a1a;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .navigation {
+        font-size: 1.8rem; /* Adjust font size for smaller screens */
+    }
+}
+
 .section-heading {
     position: relative;
     font-size: 5.5rem;
@@ -215,6 +292,24 @@ button {
     margin-top: 9rem;
     margin-bottom: 3rem;
     z-index: 9999;
+}
+
+@media (max-width: 768px) {
+    .section-heading {
+        font-size: 4rem;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-heading {
+        font-size: 3rem;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+    }
 }
 
 .about_content {
@@ -290,6 +385,85 @@ button {
     .skill {
         flex: 1 1 100%;
         max-width: 50px;
+    }
+
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project__image {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .project__title, .project__description, .project__button {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .navigation {
+        flex-direction: column;
+        margin-right: 0;
+        margin-top: 1rem;
+    }
+
+    .navigation_item {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .heading-cta {
+        width: auto;
+        padding: 0.8rem 2rem;
+    }
+
+    .heading__arrow {
+        height: 20px;
+        width: 20px;
+        margin-left: 10px;
+    }
+
+    .section-heading {
+        font-size: 3rem;
+        margin-left: 5%;
+        margin-bottom: 2rem;
+    }
+
+    .contact__form-name, .contact__form-email, .contact__form-message, .contact__form-submit {
+        width: 80%;
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title_line_1, .title_line_2 {
+        font-size: 4rem;
+        text-align: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .heading-cta {
+        width: auto;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .heading__arrow {
+        height: 18px;
+        width: 18px;
+        margin-left: 8px;
+    }
+
+    .section-heading {
+        font-size: 3rem;
+        margin-left: 5%;
+        margin-bottom: 2rem;
+    }
+
+    .contact__form-name, .contact__form-email, .contact__form-message, .contact__form-submit {
+        width: 80%;
+        font-size: 1.4rem;
     }
 }
 
@@ -527,11 +701,106 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .project {
+    .about_content {
         flex-direction: column;
-    }
-
-    .project__info {
         text-align: center;
     }
+
+    .profile__picture {
+        margin: 0 auto 2rem auto;
+    }
+
+    .about_section {
+        flex: 1 1 100%;
+    }
+
+    .skills {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .skill {
+        flex: 1 1 100%;
+        max-width: 50px;
+    }
+
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project__image {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .project__title, .project__description, .project__button {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .navigation {
+        flex-direction: column;
+        margin-right: 0;
+        margin-top: 1rem;
+    }
+
+    .navigation_item {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .heading-cta {
+        width: auto;
+        padding: 0.8rem 2rem;
+    }
+
+    .heading__arrow {
+        height: 20px;
+        width: 20px;
+        margin-left: 10px;
+    }
+
+    .section-heading {
+        font-size: 3rem;
+        margin-left: 5%;
+        margin-bottom: 2rem;
+    }
+
+    .contact__form-name, .contact__form-email, .contact__form-message, .contact__form-submit {
+        width: 80%;
+        font-size: 1.4rem;
+    }
 }
+
+@media (max-width: 480px) {
+    .title_line_1, .title_line_2 {
+        font-size: 4rem;
+        text-align: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .heading-cta {
+        width: auto;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .heading__arrow {
+        height: 18px;
+        width: 18px;
+        margin-left: 8px;
+    }
+
+    .section-heading {
+        font-size: 3rem;
+        margin-left: 5%;
+        margin-bottom: 2rem;
+    }
+
+    .contact__form-name, .contact__form-email, .contact__form-message, .contact__form-submit {
+        width: 80%;
+        font-size: 1.4rem;
+    }
+}
+
