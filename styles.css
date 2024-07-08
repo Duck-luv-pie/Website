@@ -207,6 +207,41 @@ button {
     color: #FEC260;
 }
 
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .navigation {
+        margin-right: 5rem;
+        font-size: 1.8rem;
+    }
+
+    .navigation_item:not(:last-child) {
+        margin-right: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        margin-right: 2rem;
+        font-size: 1.6rem;
+    }
+
+    .navigation_item:not(:last-child) {
+        margin-right: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation {
+        margin-right: 1rem;
+        font-size: 1.4rem;
+    }
+
+    .navigation_item:not(:last-child) {
+        margin-right: 1.5rem;
+    }
+}
+
+
 .section-heading {
     position: relative;
     font-size: 5.5rem;
