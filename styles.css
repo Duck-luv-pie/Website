@@ -474,79 +474,52 @@ button {
     margin-bottom: 30px;
 }
 
-.project__title {
-    color: #fafafa;
-    font-size: 3rem;
-    font-weight: 700;
-    margin-left: 60%;
-}
-
-.project__description {
-    color: #fafafa;
-    font-size: 2rem;
-    font-weight: 300;
-    margin-left: 60%;
-}
-
-/* General Styles */
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #1a1a1a;
-    color: #fafafa;
-}
-
-/* Project Section */
-#projects {
-    padding: 4rem 0;
-    background-color: #121212;
-}
-
-.section-heading {
-    font-size: 4rem;
-    margin-left: 10%;
-    margin-bottom: 3rem;
-}
-
 .project {
+    position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 4rem;
 }
 
 .project__image-container {
-    flex: 1;
+    position: relative;
+    width: 80%;
 }
 
 .project__image {
-    width: 85%;
-    position: relative;
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .project__info {
-    flex: 1;
-    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 5%;
+    color: #fafafa;
+    text-align: center;
+    width: 60%; 
+    
 }
 
 .project__title {
-    font-size: 3rem;
+    font-size: 2.4rem;
     margin-bottom: 1rem;
 }
 
 .project__description {
     font-size: 1.6rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .project__button {
     display: inline-block;
-    padding: 1rem 2rem;
-    margin-left: 60%;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 0.8rem 1.2rem;
     background-color: #FEC260;
     color: #1a1a1a;
     text-transform: uppercase;
@@ -561,12 +534,75 @@ body {
 }
 
 /* Responsive Design */
+
+@media (max-width: 2400px) {
+    .project__title {
+        font-size: 6rem;
+    }
+    
+    .project__description {
+        font-size: 3rem;
+    }
+    
+    .project__button {
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .project__title {
+        font-size: 4rem;
+    }
+    
+    .project__description {
+        font-size: 3rem;
+    }
+    
+    .project__button {
+        font-size: 1.4rem;
+    }
+}
+
 @media (max-width: 768px) {
     .project {
         flex-direction: column;
+        text-align: center;
     }
 
     .project__info {
-        text-align: center;
+        width: 80%; /* Adjust width for smaller screens */
+    }
+    
+    .project__title {
+        font-size: 3rem;
+    }
+    
+    .project__description {
+        font-size: 1.2rem;
+    }
+    
+    .project__button {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .project__info {
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+    
+    .project__title {
+        font-size: 1.6rem;
+    }
+    
+    .project__description {
+        font-size: 1rem;
+    }
+    
+    .project__button {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
     }
 }
