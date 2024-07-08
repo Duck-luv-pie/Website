@@ -3,13 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const navItems = document.querySelectorAll('.navigation_item');
     const home = document.getElementById('hero');
     const contact = document.getElementById('contact');
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-
-    // Toggle navigation menu on hamburger click
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-    });
 
     // Highlighting navigation items on scroll
     window.addEventListener('scroll', () => {
@@ -41,6 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Moving the dot with the cursor
     const cursorCircle = document.querySelector('.cursor-circle');
+    if (!cursorCircle) {
+        console.error('Cursor circle element not found');
+        return;
+    }
 
     let mouseX = 0;
     let mouseY = 0;
@@ -48,8 +45,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let circleY = 0;
 
     document.addEventListener('mousemove', function(event) {
-        mouseX = event.clientX-5;
-        mouseY = event.clientY-5;
+        mouseX = event.clientX - 5;
+        mouseY = event.clientY - 5;
+        console.log(`Mouse X: ${mouseX}, Mouse Y: ${mouseY}`);
     });
 
     function animateCircle() {
