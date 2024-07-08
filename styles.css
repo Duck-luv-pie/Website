@@ -10,7 +10,7 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     scroll-behavior: smooth;
-    height: 100%; /* Ensure html takes full height */
+    height: 100%; 
 }
 
 body {
@@ -254,33 +254,33 @@ button {
 
 .about_content {
     display: flex;
-    flex-wrap: nowrap; /* Ensure the content doesn't wrap */
+    flex-wrap: nowrap; 
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
     max-width: 1200px;
     padding: 2rem;
-    font-size: 1.8rem; /* Increased text size for readability */
+    font-size: 1.8rem;
 }
 
 .profile__picture {
     flex: 1 1 30%;
     margin-right: 2rem;
-    max-width: 300px; /* Set a maximum width */
-    max-height: 300px; /* Set a maximum height */
+    max-width: 300px; 
+    max-height: 300px; 
     overflow: hidden;
 }
 
 .profile__picture img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the area without distortion */
+    height: auto; 
+    object-fit: cover; 
 }
 
 .about_section {
     flex: 1 1 60%;
     font-weight: 300;
-    text-align: left; /* Ensure text is left-aligned */
+    text-align: left; 
 }
 
 .skills {
@@ -341,7 +341,7 @@ button {
     color: inherit;
     font-size: 1.6rem;
     border: none;
-    width: 50%;
+    width: 70%;
 }
 
 .contact__form-message {
@@ -351,7 +351,7 @@ button {
     color: inherit;
     font-size: 1.6rem;
     border: none;
-    width: 50%;
+    width: 70%;
     height: 200px;
 }
 
@@ -365,7 +365,7 @@ button {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 50%;
+    width: 70%;
 }
 
 .contact__form-submit:hover {
@@ -379,7 +379,7 @@ button {
     align-items: center;
     height: 160px;
     background-color: #282828;
-    margin-top: auto; /* Ensures footer is at the bottom */
+    margin-top: auto; 
 }
 
 .socials {
@@ -455,16 +455,20 @@ button {
     position: fixed;
     top: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     pointer-events: none;
-    transition: transform 0.1s ease, display 0.1s ease;
     transform: translate(-50%, -50%);
-    z-index: 9999;
-    display: none; /* Start with cursor hidden */
+    z-index: 10000; 
+    display: none; /* To start with the cursor hidden */
+    mix-blend-mode: difference; 
+    background-color: white; 
+    transition: transform 0.1s ease, display 0.1s ease;
 }
+
+
+
 
 
 .contact__text {
@@ -573,7 +577,7 @@ button {
     }
 
     .project__info {
-        width: 80%; /* Adjust width for smaller screens */
+        width: 80%; 
     }
     
     .project__title {
@@ -591,8 +595,8 @@ button {
 
 @media (max-width: 480px) {
     .project__info {
-        width: 90%; /* Adjust width for smaller screens */
-        padding: 1rem; /* Adjust padding for smaller screens */
+        width: 90%; 
+        padding: 1rem; 
     }
     
     .project__title {

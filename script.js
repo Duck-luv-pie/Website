@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
             cursorCircle.style.display = 'block';
             isFirstMove = false;
         }
-        mouseX = event.clientX - 5;
-        mouseY = event.clientY - 5;
+        mouseX = event.clientX - 10; 
+        mouseY = event.clientY - 10; 
     });
 
     function animateCircle() {
