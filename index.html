@@ -121,11 +121,10 @@
 
         <section id="contact">
             <h2 class="section-heading">Contact</h2>
-            
             <p class="contact__text">If you are interested in collaborating or have a question, leave your information below and I'll respond promptly!</p>
-            <form class="contact__form" action="/submit" method="post">
+            <form class="contact__form" action="/.netlify/functions/submitForm" method="post">
                 <input class="contact__form-name" name="name" placeholder="Name"/>
-                <input class="contact__form-email" type="email" name="_replyto" placeholder="Email"/>
+                <input class="contact__form-email" type="email" name="email" placeholder="Email"/>
                 <textarea class="contact__form-message" name="message" placeholder="Message"></textarea>
                 <button type="submit" class="contact__form-submit">Submit</button>
             </form>

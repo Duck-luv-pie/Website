@@ -245,7 +245,7 @@ button {
 .section-heading {
     position: relative;
     font-size: 5.5rem;
-    font-weight: 700;
+    font-weight: 500;
     margin-left: 10rem;
     margin-top: 9rem;
     margin-bottom: 3rem;
@@ -509,7 +509,7 @@ button {
     color: #fafafa;
     text-align: center;
     width: 60%; 
-    
+    z-index: 10000; 
 }
 
 .project__title {
