@@ -1,0 +1,20 @@
+{
+	"siteId": "087e8d8d-40bd-48b6-be17-200cff410292",
+	"geolocation": {
+		"data": {
+			"city": "Waterloo",
+			"country": {
+				"code": "CA",
+				"name": "Canada"
+			},
+			"subdivision": {
+				"code": "ON",
+				"name": "Ontario"
+			},
+			"timezone": "America/Toronto",
+			"latitude": 43.474,
+			"longitude": -80.554
+		},
+		"timestamp": 1720660427675
+	}
+}

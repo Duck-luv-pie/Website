@@ -1,0 +1,33 @@
+plugins = []
+functionsDirectory = "C:\\Users\\Eric\\Desktop\\Website\\functions"
+functionsDirectoryOrigin = "config-v1"
+headers = []
+redirects = []
+
+[dev]
+functions = "functions"
+publish = "."
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "C:\\Users\\Eric\\Desktop\\Website"
+publishOrigin = "default"
+functions = "C:\\Users\\Eric\\Desktop\\Website\\functions"
+commandOrigin = "heuristics"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]

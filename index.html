@@ -122,12 +122,12 @@
         <section id="contact">
             <h2 class="section-heading">Contact</h2>
             <p class="contact__text">If you are interested in collaborating or have a question, leave your information below and I'll respond promptly!</p>
-            <form class="contact__form" action="/.netlify/functions/submitForm" method="post">
-                <input class="contact__form-name" name="name" placeholder="Name"/>
-                <input class="contact__form-email" type="email" name="email" placeholder="Email"/>
-                <textarea class="contact__form-message" name="message" placeholder="Message"></textarea>
+            <form class="contact__form" id="contactForm">
+                <input class="contact__form-name" name="name" placeholder="Name" required/>
+                <input class="contact__form-email" type="email" name="email" placeholder="Email" required/>
+                <textarea class="contact__form-message" name="message" placeholder="Message" required></textarea>
                 <button type="submit" class="contact__form-submit">Submit</button>
-            </form>
+              </form>                            
         </section>
     </main>
 
@@ -147,7 +147,37 @@
     </footer>
 
     <div class="cursor-circle"></div>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const form = event.target;
+            const data = {
+                name: form.name.value,
+                email: form.email.value,
+                message: form.message.value
+            };
 
+            try {
+                const response = await fetch('/.netlify/functions/submitForm', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const result = await response.json();
+                alert('Form submission successful: ' + result.message);
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Form submission failed: ' + error.message);
+            }
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
