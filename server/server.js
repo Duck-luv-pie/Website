@@ -33,7 +33,7 @@ exports.handler = async (event, context) => {
 
   try {
     await client.connect();
-    const database = client.db('website-data');  // Use your actual database name here
+    const database = client.db('website-data');  
     const collection = database.collection('submissions');
 
     const newSubmission = { name, email, message, date: new Date() };
@@ -41,7 +41,7 @@ exports.handler = async (event, context) => {
 
     const msg = {
       to: 'eyoon06@gmail.com',
-      from: 'eyoon06@gmail.com',  // Sender email verified with SendGrid
+      from: 'ducksluvpie@gmail.com',  
       subject: 'New Contact Form Submission',
       text: `You have a new form submission from ${name} (${email}): ${message}`,
     };

@@ -1,12 +1,12 @@
 plugins = []
-functionsDirectory = "C:\\Users\\Eric\\Desktop\\Website\\functions"
+functionsDirectory = "C:\\Users\\Eric\\Desktop\\Website\\netlify\\functions"
 functionsDirectoryOrigin = "config-v1"
 headers = []
 redirects = []
 
 [dev]
-functions = "functions"
-publish = "."
+functions = "netlify/functions"
+publish = "public"
 
 [functions]
 
@@ -15,7 +15,7 @@ publish = "."
 [build]
 publish = "C:\\Users\\Eric\\Desktop\\Website"
 publishOrigin = "default"
-functions = "C:\\Users\\Eric\\Desktop\\Website\\functions"
+functions = "C:\\Users\\Eric\\Desktop\\Website\\netlify\\functions"
 commandOrigin = "heuristics"
 
 [build.environment]
