@@ -111,13 +111,11 @@
                         <h3 class="project__title">Price Reference App</h3>
                         <p class="project__description">Full stack reference application built with Kivy, KivyMD, and Python.</p>
                         <a href="https://apps.apple.com/ca/app/sports-pricing/id1659234086" target="_blank" class="project__button">Download App</a>
-                        <a href="https://github.com" target="_blank" class="project__button">Youtube</a>
+                        <a href="https://youtu.be/njjQIO-Oads" target="_blank" class="project__button">Youtube</a>
                     </div>
                 </div>
             </div>
         </section>
-        
-        
 
         <section id="contact">
             <h2 class="section-heading">Contact</h2>
@@ -127,7 +125,10 @@
                 <input class="contact__form-email" type="email" name="email" placeholder="Email" required/>
                 <textarea class="contact__form-message" name="message" placeholder="Message" required></textarea>
                 <button type="submit" class="contact__form-submit">Submit</button>
-              </form>                            
+                <div id="popup_background" class="popup_background">
+                    <div id="popup" class="popup">Submitted</div>
+                </div>
+            </form>
         </section>
     </main>
 
@@ -141,7 +142,6 @@
             </a>
             <a href="https://github.com/Duck-luv-pie" target="_blank" class="social-icon">
                 <img src="images/github-icon.png" alt="Github">
-         
             </a>
         </div>
         <p class="copyright">ERIC YOON ©2024</p>
@@ -150,7 +150,21 @@
     <div class="cursor-circle"></div>
     <script>
         document.getElementById('contactForm').addEventListener('submit', async function(event) {
-            event.preventDefault();
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Show the popup
+            const popupBackground = document.getElementById('popup_background');
+            const popup = document.getElementById('popup');
+            popupBackground.style.display = 'flex';
+            popup.style.display = 'block';
+
+            // Hide the popup after 2 seconds
+            setTimeout(() => {
+                popup.style.display = 'none';
+                popupBackground.style.display = 'none';
+            }, 2000);
+
+            // Form submission logic
             const form = event.target;
             const data = {
                 name: form.name.value,
@@ -172,13 +186,14 @@
                 }
 
                 const result = await response.json();
-                alert('Form submission successful: ' + result.message);
+                console.log('Form submission successful: ' + result.message);
             } catch (error) {
                 console.error('Error:', error);
-                alert('Form submission failed: ' + error.message);
+                console.log('Form submission failed: ' + error.message);
             }
         });
     </script>
     <script src="script.js"></script>
 </body>
+
 </html>
