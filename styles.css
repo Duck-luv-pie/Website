@@ -359,8 +359,9 @@ button {
     margin-bottom: 20px;
     padding: 0.6rem 1rem;
     background-color: #FEC260;
-    color: white;
+    color: rgb(48, 47, 47);
     font-size: 1.6rem;
+    font-weight: bold; 
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
