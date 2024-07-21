@@ -25,7 +25,7 @@ exports.handler = async (event, context) => {
       from: 'ducksluvpie@gmail.com',
       subject: `New message from ${name}`,
       text: message,
-      html: `<strong>${message}</strong>`,
+      html: `<strong>${message}, from ${email}</strong>`,
     };
 
     await sgMail.send(msg);
