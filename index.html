@@ -150,49 +150,51 @@
     <div class="cursor-circle"></div>
     <script>
         document.getElementById('contactForm').addEventListener('submit', async function(event) {
-            event.preventDefault(); // Prevent the default form submission behavior
-
-            // Show the popup
-            const popupBackground = document.getElementById('popup_background');
-            const popup = document.getElementById('popup');
-            popupBackground.style.display = 'flex';
-            popup.style.display = 'block';
-
-            // Hide the popup after 2 seconds
-            setTimeout(() => {
-                popup.style.display = 'none';
-                popupBackground.style.display = 'none';
-            }, 2000);
-
-            // Form submission logic
-            const form = event.target;
-            const data = {
-                name: form.name.value,
-                email: form.email.value,
-                message: form.message.value
-            };
-
-            try {
-                const response = await fetch('/.netlify/functions/submitForm', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                });
-
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-
-                const result = await response.json();
-                console.log('Form submission successful: ' + result.message);
-            } catch (error) {
-                console.error('Error:', error);
-                console.log('Form submission failed: ' + error.message);
+          event.preventDefault(); // Prevent the default form submission behavior
+      
+          // Show the popup
+          const popupBackground = document.getElementById('popup_background');
+          const popup = document.getElementById('popup');
+          popupBackground.style.display = 'flex';
+          popup.style.display = 'block';
+      
+          // Hide the popup after 2 seconds
+          setTimeout(() => {
+            popup.style.display = 'none';
+            popupBackground.style.display = 'none';
+          }, 2000);
+      
+          // Form submission logic
+          const form = event.target;
+          const data = {
+            name: form.name.value,
+            email: form.email.value,
+            message: form.message.value
+          };
+      
+          try {
+            const response = await fetch('/.netlify/functions/send-email', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(data)
+            });
+      
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
             }
+      
+            const result = await response.json();
+            console.log('Form submission successful:', result.message);
+          } catch (error) {
+            console.error('Form submission failed:', error);
+          }
         });
-    </script>
+      </script>
+      
+      
+    
     <script src="script.js"></script>
 </body>
 
