@@ -80,8 +80,8 @@
                     <p>Python</p>
                 </div>
                 <div class="skill">
-                    <img src="images/mongodb.png" alt="MongoDB" />
-                    <p>MongoDB</p>
+                    <img src="images/nodejs.png" alt="Node.js" />
+                    <p>Node.js</p>
                 </div>
                 <div class="skill">
                     <img src="images/git.png" alt="Git" />
@@ -150,21 +150,19 @@
     <div class="cursor-circle"></div>
     <script>
         document.getElementById('contactForm').addEventListener('submit', async function(event) {
-          event.preventDefault(); // Prevent the default form submission behavior
+          event.preventDefault(); 
       
-          // Show the popup
           const popupBackground = document.getElementById('popup_background');
           const popup = document.getElementById('popup');
           popupBackground.style.display = 'flex';
           popup.style.display = 'block';
       
-          // Hide the popup after 2 seconds
+          // Hide popup after 2 seconds
           setTimeout(() => {
             popup.style.display = 'none';
             popupBackground.style.display = 'none';
           }, 2000);
       
-          // Form submission logic
           const form = event.target;
           const data = {
             name: form.name.value,
@@ -184,7 +182,7 @@
             if (!response.ok) {
               throw new Error('Network response was not ok');
             }
-      
+
             const result = await response.json();
             console.log('Form submission successful:', result.message);
           } catch (error) {
@@ -193,8 +191,6 @@
         });
       </script>
       
-      
-    
     <script src="script.js"></script>
 </body>
 
