@@ -1,7 +1,4 @@
 node_modules/
 
-# Ignore the .env file
-.env
-
 # Local Netlify folder
 .netlify
