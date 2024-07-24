@@ -27,20 +27,6 @@ This is the personal website of Eric Yoon, a full stack developer with a deep pa
 - **CSS**: Styling of the website, including animations and responsive design.
 - **JavaScript**: Interactivity and dynamic content.
 
-## Installation
-
-To run this website locally, follow these steps:
-
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/yourusername/your-repo-name.git
-    ```
-2. Navigate to the project directory:
-    ```sh
-    cd your-repo-name
-    ```
-3. Open the `index.html` file in your preferred web browser.
-
 ## Usage
 
 You can view the live version of the website at [ericyoon.dev](https://ericyoon.dev).
@@ -48,6 +34,7 @@ You can view the live version of the website at [ericyoon.dev](https://ericyoon.
 ## Contact
 
 Feel free to reach out if you have any questions or suggestions!
+Please refer to the links below or if you want to reach out through email, fill out the contact form on my website! 
 
 - **Instagram**: [eric.__.yoon](https://www.instagram.com/eric.__.yoon/)
 - **LinkedIn**: [Eric Yoon](https://www.linkedin.com/in/eric-yoon-679691271/)
