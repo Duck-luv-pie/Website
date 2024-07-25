@@ -184,7 +184,7 @@ button {
     background-color: rgba(40,40,40,0.95);
     backdrop-filter: blur(8px);
     box-shadow: 0 4px 4px rgba(0,0,0,0.3);
-    z-index: 10000;
+    z-index: 10001;
 }
 
 .navigation {
