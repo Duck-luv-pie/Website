@@ -61,8 +61,12 @@ button {
 }
 
 .intro_background {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
-    width: 100%
+    width: 100%;
+    z-index: 1;
 }
 
 .heading {
@@ -638,4 +642,3 @@ button {
     display: none; /* Hide by default */
     border-radius: 5px;
 }
-
