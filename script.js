@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
+    
     // Cursor circle
     const cursorCircle = document.querySelector('.cursor-circle');
     if (!cursorCircle) {
@@ -45,14 +45,21 @@ document.addEventListener('DOMContentLoaded', function() {
     let circleY = 0;
     let isFirstMove = true;
 
-    document.addEventListener('mousemove', function(event) {
-        if (isFirstMove) {
-            cursorCircle.style.display = 'block';
-            isFirstMove = false;
-        }
-        mouseX = event.clientX - 10; 
-        mouseY = event.clientY - 10; 
-    });
+    function isMobileDevice() {
+        return /Mobi|Android/i.test(navigator.userAgent);
+      }
+
+      
+    if (!isMobileDevice()) {
+        document.addEventListener('mousemove', function(event) {
+            if (isFirstMove) {
+                cursorCircle.style.display = 'block';
+                isFirstMove = false;
+            }
+            mouseX = event.clientX - 10; 
+            mouseY = event.clientY - 10; 
+        });
+    }
 
     function animateCircle() {
         circleX += (mouseX - circleX) * 0.9;
