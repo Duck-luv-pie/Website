@@ -642,3 +642,32 @@ button {
     display: none; /* Hide by default */
     border-radius: 5px;
 }
+
+.heading {
+    text-align: center; /* Ensure center alignment by default */
+    width: 100%; /* Make sure it takes full width */
+    padding: 0 2rem; /* Add some padding instead of margin */
+}
+
+.title_line_1, .title_line_2 {
+    font-size: 6rem;
+    width: 100%; /* Ensure full width */
+}
+
+@media (max-width: 1024px) {
+    .title_line_1, .title_line_2 {
+        font-size: 5.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .title_line_1, .title_line_2 {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title_line_1, .title_line_2 {
+        font-size: 4rem;
+    }
+}
